@@ -78,6 +78,9 @@ nav .container ul li:last-child a{
   padding-top: 20px;
   color:mintcream
 }
+banner .animate__animated.animate__zoomInDown {
+  --animate-duration: 5s;
+}
 /*********** About Section **********/
 
 .about-section {
@@ -182,23 +185,43 @@ nav .container ul li:last-child a{
   margin: 0 5%;
 }
 .section-portfolio .container{
-  padding-top: 4.5rem;
+  /*padding-top: 4.5rem;*/
   margin-top: 4.5rem;
 }
 .section-portfolio h1{
   font-size: 2.5rem;
   text-align: center;
 }
+.portfolio-tab{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.tab-link{
+  margin: 0 5px;
+  font-size: 20px;
+  padding: 10px 20px;
+}
 .section-portfolio .row{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-top: 40px;
+  flex-wrap: wrap;
+  display: none;
 }
+.section-portfolio #all{
+  display: flex;
+}
+
 .section-portfolio .row .portfolio{
   border: 1px solid #136a8a;
   border-radius: 8px;
-  margin:0 30px; 
+  margin:20px 0px; 
+  width: 30%;
+
   
 }
 .section-portfolio .row .portfolio:first-child{
@@ -242,6 +265,9 @@ nav .container ul li:last-child a{
   background-color:#267871;
   color: #ffe4c4;
 }
+
+
+/**** Footer Section ***********/
 footer{
   background: #136a8a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
