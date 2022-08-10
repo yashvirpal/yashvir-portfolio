@@ -8,7 +8,8 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: inherit;
+  
 }
 nav{
   background: #136a8a;  /* fallback for old browsers */

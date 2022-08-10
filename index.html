@@ -9,6 +9,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -559,11 +560,12 @@
         var navbar = document.getElementById("navbar");
 
         // Get the offset position of the navbar
-        var sticky = navbar.offsetTop;
+        // var sticky = navbar.offsetTop;
+        // alert(sticky)
 
         // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
         function myFunction() {
-          if (window.pageYOffset >= sticky) {
+          if (window.pageYOffset >= 50) {
             navbar.classList.add("sticky")
           } else {
             navbar.classList.remove("sticky");
