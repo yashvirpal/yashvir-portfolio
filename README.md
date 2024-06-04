@@ -1,4 +1,4 @@
 # Yashvir Portfolio
 
-[![YashvirPortfolio](https://yashvirpal.com/portfolio.mp4)]
+![YashvirPortfolio](https://yashvirpal.com/Yashvir-Pal.png)
     
