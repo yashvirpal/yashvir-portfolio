@@ -1,4 +1,4 @@
 # Yashvir Portfolio
 
-    ![YashvirPortfolio](./dist/assets/Portfolio.png)
+    ![YashvirPortfolio](https://yashvirpal.com/portfolio.mp4)
     
