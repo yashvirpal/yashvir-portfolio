@@ -1,7 +1,8 @@
 {
     "rewrites": [
-                { "source": "/(.*)", "destination": "dist/index.html" },
-                { "source": "/resume.html","destination": "/dist/resume.html"}
+                { "source": "/resume.html","destination": "/dist/resume.html"},
+                { "source": "/(.*)", "destination": "dist/index.html" }
+                
 
                 ]
 }
