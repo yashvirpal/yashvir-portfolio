@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashvir Pal</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</head>
+
+<body class="bgg-slate-900">
+    <main class="py-14 h-screen w-screen bg-center bg-cover overflow-x-hidden overflow-y-auto bg-[url('assets/img/page-bg-dark-1.jpg')]">
+
+
+
+        <nav class="mb-12">
+            <div class="px-3.5 flex justify-between xl:justify-center xl:items-center">            
+                <div class="logo text-4xl xl:text-center font-bold text-amber-300 xl:text-7xl">Yashvir</div>
+                <div class="menu xl:hidden text-amber-300">
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-button" class="text-white xl:hidden hover:text-gray-300 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+
+                </div>
+            </div>
+            <!-- Mobile menu -->
+            <div class="relative px-3.5">
+                <div class="relative px-3.5">
+                    <div id="mobile-menu" class="bg-gray rounded-xl md:hidden px-3.5 py-5 shadow-3xl
+                        hidden   absolute top-6 left-0 right-0">
+                        <ul class="capitalize text-white text-sm font-medium leading-7">
+                            <li class="active">
+                                <a href="index.html" class="block  hover:text-blue py-1.5 px-16 ">
+                                    <span>
+                                        <i class="fa-solid fa-address-card"></i>
+                                    </span>
+                                    about
+                                </a>
+                            </li>
+                            <li>
+                                <a href="resume.html" class="block hover:text-blue py-1.5 px-16 ">
+                                    <span>
+                                        <i class="fa-solid fa-file"></i>
+                                    </span>
+                                    Resume
+                                </a>
+                            </li>
+                            <li>
+                                <a href="portfolio.html" class="block  hover:text-blue py-1.5 px-16 ">
+                                    <span>
+                                        <i class="fa-solid fa-briefcase"></i>
+                                    </span>
+                                    Works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="blog.html" class="block hover:text-blue py-1.5 px-16 ">
+                                    <span>
+                                        <i class="fa-solid fa-newspaper"></i>
+                                    </span>
+                                    Blogs
+                                </a>
+                            </li>
+                            <li class="mean-last">
+                                <a href="contact.html" class="block hover:text-blue py-1.5 px-16 ">
+                                    <span>
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </span>
+                                    contact
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>    
+        </nav>
+        <section class="px-3.5 xl:pt-24 text-white xl:flex xl:flex-row xl:justify-between gap-7 ">
+            <div class="bg-black mb-7 text-center rounded-[20px] px-10 py-8  xl::h-fit xl:sticky xl:top-0 h-fit">
+                <div class="py-4 flex flex-col justify-center items-center xl:relative xl:top-[-150px]">
+                    <div class="w-[240px] h-[240px] rounded-[20px] m-auto mb-5 mt-0">
+                        <img class="w-full h-full align-middle rounded-[20px] object-cover" src="dist/assets/img/parson-img-1.png" alt="yashvir profile pic" />
+                    </div>
+                    <h1 class="text-2xl font-medium font-serif capitalize; mb-2"><a href="javascript:void(0)">Yashvir Pal</a></h1>
+                    <span class="inline-block bg-gray text-silver px-[20px] py-[4px] mb-3.5 font-serif font-medium rounded capitalize  text-sm">Fullstack Web Developer</span>
+                    <ul class="flex flex-wrap  justify-center justify-center align-center mb-3.5 list-none">
+                        <!-- <li class="bg-gray  mx-1 my-1 rounded-lg hover:text-white">
+                            <a href="#" class="hover:text-white hover:bg-socialbg text-fb-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="bg-gray mx-1 my-1 rounded-lg">
+                            <a href="#" class="hover:text-white hover:bg-socialbg text-twitter-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li> 
+                        <li class="bg-gray mx-1 my-1 rounded-lg">
+                            <a href="#" class="hover:text-white hover:bg-socialbg text-insta-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>-->
+                        <li class="bg-gray rounded-lg mx-1 my-1">
+                            <a target="_blank" href="https://www.linkedin.com/in/sveerpal/" class="hover:text-white hover:bg-socialbg text-linkedin-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li class="bg-gray rounded-lg mx-1 my-1">
+                            <a target="_blank" href="https://wa.me/8756672297" class="hover:text-white hover:bg-socialbg text-whatsapp-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="bg-gray rounded-lg mx-1 my-1">
+                            <a target="_blank" href="#" class="hover:text-white hover:bg-socialbg text-skypee-color w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-skype"></i>
+                            </a>
+                        </li>
+                        <li class="bg-gray rounded-lg mx-1 my-1">
+                            <a target="_blank" href="https://github.com/SveerPal" class="hover:text-white hover:bg-socialbg  w-10 h-10 inline-block text-center leading-10 text-lg rounded-lg">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="w-full mdd:w-8/12 lgg:w-6/12 ww-4/6 personal-details bg-gray rounded-2xl text-left mb-5 py-5 px-7">
+                        <div class="phone flex items-center gap-2.5  py-2.5">
+                            <div class="icon rounded-lg w-11 h-11 bg-black inline-block flex text-center text-1xl leading-12 shadow-pdtl duration-[0.3s] items-center justify-center text-pdtlphonecolor">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                            </div>
+                            <div class="text">
+                                <span class="text-xs leading-4 font-normal mb-2 capitalize text-pdtlcolor">Phone</span>
+                                <p class="font-normal text-base leading-6 font-sans">+91 8756672297</p>
+                            </div>
+                        </div>
+                        <div class="email flex items-center gap-2.5 border-t border-charcoal py-2.5">
+                            <div class="icon rounded-lg w-11 h-11 bg-black inline-block flex text-center text-1xl leading-12 shadow-pdtl duration-[0.3s] items-center justify-center text-pdtlemailcolor">
+                                <i class="fa-solid fa-envelope-open-text"></i>
+                            </div>
+                            <div class="text">
+                                <span class="text-xs leading-4 font-normal mb-2 capitalize text-pdtlcolor">Email</span>
+                                <p class="font-normal text-base leading-6">yashveersoftwere06@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="location flex items-center gap-2.5 border-t border-charcoal py-2.5">
+                            <div class="icon rounded-lg w-11 h-11 bg-black inline-block flex text-center text-1xl leading-12 shadow-pdtl duration-[0.3s] items-center justify-center text-pdtllocationcolor">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="text">
+                                <span class="text-xs leading-4 font-normal mb-2 capitalize text-pdtlcolor">Location</span>
+                                <p class="font-normal text-base leading-6">Delhi India</p>
+                            </div>
+                        </div>
+                        <div class="birthday flex items-center gap-2.5 border-t border-charcoal py-2.5">
+                            <div class="icon rounded-lg w-11 h-11 bg-black inline-block flex text-center text-1xl leading-12 shadow-pdtl duration-[0.3s] items-center justify-center text-pdtlcalendercolor">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                            <div class="text">
+                                <span class="text-xs leading-4 font-normal mb-2 capitalize text-pdtlcolor">Birthday</span>
+                                <p class="font-normal text-base leading-6">Nov 26, 1993</p>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="cvbtn bg-blue inline-block py-3.5 px-10 rounded-xl border border-solid border-black hover:bg-gray hover:border-blue">
+                        <a href="dist/assets/yash_phpdeveloper_7+years.pdf" target="_blank" class="  font-medium text-lg ">Download CV</a>
+                    </div>
+                     
+                </div>
+            </div>
+            <div class="bg-black mb-7 rounded-[20px] py-8 xl:pt-12" >
+                <div class="px-10 ">
+                    <div class="mb-9">
+                        <h2 class="text-4xl mb-4 font-bold capitalize iinline-block relative after:content-[''] after:ml-4  after:w-52 after:bg-blue after:h-1 after:rounded-md after:absolute after:left-100 after:top-1/2">about</h2>
+                        <p class="text-zinc-400 text-base font-normal leading-7 mb-7 text-justify">Highly skilled and motivated Software Development Engineer with over 7+
+                             years of experience in software creation and maintenance. 
+                            Possesses a strong foundation in website troubleshooting and is adept at tackling project tasks across 
+                            various levels. Known for being communicative, honest, adaptable, and willing to compromise, with a proven 
+                            track record in mentoring co-workers and assuming leadership roles in project implementation.</p>
+                        
+                    </div>
+                </div>
+               
+                <div class="px-10 ">
+                    <h3 class="text-4xl mb-7 font-medium capitalize iinline-block">What I Do!</h3>
+                    <div class="flex mb-7 flex-col text-justify   justify-around items-centerr md:flex-row md:flex-wrap gap-5">
+                        <div class="mdd:w-5/12 card rounded-xl mb-7 p-5 pb-3.5 border-zinc-800 border block">
+                            <div class="flex gap-5">
+                                <div class="icon text-blue text-4xl">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-2xl capitalize font-medium mb-2.5 poppin font-serif">Web Development</h4>
+                                    <p class="font-serif text-base font-normal text-zinc-400 leading-8">
+                                        I specialize in designing and developing responsive, user-friendly websites that provide exceptional user 
+                                        experiences and drive business success. By combining my expertise in UI/UX design with technical skills in 
+                                        web development, I create websites that are visually appealing, highly functional, and optimized for performance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdd:w-5/12 card rounded-xl mb-7 p-5 pb-3.5 border-zinc-800 border block">
+                            <div class="flex gap-5">
+                                <div class="icon text-pdtlcalendercolor text-4xl">
+                                    <i class="fa-solid fa-swatchbook"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-2xl capitalize font-medium mb-2.5 poppin font-serif">Ui/Ux Design</h4>
+                                    <p class="font-serif text-base font-normal text-zinc-400 leading-8">
+                                        I create visually appealing and user-friendly interfaces that enhance user interactions and improve overall
+                                         satisfaction. My design philosophy revolves around clarity, simplicity, and consistency, ensuring 
+                                        that every visual element serves a purpose and contributes to a cohesive user experience.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdd:w-5/12 card rounded-xl mb-7 p-5 pb-3.5 border-zinc-800 border block">
+                            <div class="flex gap-5">
+                                <div class="icon text-pdtllocationcolor text-4xl">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-2xl capitalize font-medium mb-2.5 poppin font-serif">App Development</h4>
+                                    <p class="font-serif text-base font-normal text-zinc-400 leading-8">
+                                        I specialize in designing and developing robust, user-friendly mobile applications that solve real-world
+                                         problems and deliver exceptional user experiences. Combining my expertise in UI/UX design with technical 
+                                         skills in app development, I create apps that are visually appealing, intuitive, and highly functional.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="mdd:w-5/12 card rounded-xl mb-7 p-5 pb-3.5 border-zinc-800 border block">
+                            <div class="flex gap-5">
+                                <div class="icon text-pdtllocationcolor text-4xl">
+                                    <i class="fa-solid fa-camera-retro"></i>
+                                </div>
+                                <div class="text">
+                                    <h4 class="text-2xl capitalize font-medium mb-2.5 poppin font-serif">Photography</h4>
+                                    <p class="font-serif text-base font-normal text-zinc-400 leading-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                        euismod tincidunt volutpat.</p>
+                                </div>
+                            </div>
+                        </div> -->
+                       
+                    </div>
+                </div>
+                <div class="bg-stone-900 px-10 pb-16 pt-12 text-center">
+                    <div class="mb-14 text-3xl font-medium capitalize">  
+                        <h2>Client</h2>
+                    </div>
+                    <div>
+
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper overflow-hidden">
+                              <div class="swiper-slide">
+                                <img class="bostami-client-slider-logo" src="https://bostami-bootstrap.ibthemespro.com/bostami-template/assets/img/client/client-logo-2.png" alt="">
+                            </div>
+                              <div class="swiper-slide"><img class="bostami-client-slider-logo" src="https://bostami-bootstrap.ibthemespro.com/bostami-template/assets/img/client/client-logo-2.png" alt=""></div>
+                              <div class="swiper-slide"><img class="bostami-client-slider-logo" src="https://bostami-bootstrap.ibthemespro.com/bostami-template/assets/img/client/client-logo-2.png" alt=""></div>
+                              <div class="swiper-slide"><img class="bostami-client-slider-logo" src="https://bostami-bootstrap.ibthemespro.com/bostami-template/assets/img/client/client-logo-2.png" alt=""></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                          </div>    
+                        
+  
+                    </div>
+                </div> 
+                <div class="text-center pt-6">
+                    <p>© 2024 All Rights Reserved.</p>
+                </div>
+            </div> 
+            <div class="bg-black mb-7 rounded-[20px] hidden xl:inline-block px-10 py-8 h-fit sticky top-0" >
+                <ul class="capitalize text-center text-zinc-400  text-lg font-medium leading-7 flex flex-col justify-center items-center gap-5">
+                    <li class="bg-gray rounded-lg hover:bg-blue hover:text-white p-5">
+                        <a href="index.html" class="block ">
+                            <span>
+                                <i class="fa-solid fa-address-card"></i>
+                            </span>
+                            about
+                        </a>
+                    </li>
+                    <li class="bg-gray rounded-lg hover:bg-blue hover:text-white p-5">
+                        <a href="resume.html" class="block">
+                            <span>
+                                <i class="fa-solid fa-file"></i>
+                            </span>
+                            Resume
+                        </a>
+                    </li>
+                    <li class="bg-gray rounded-lg hover:bg-blue hover:text-white p-5">
+                        <a href="portfolio.html" class="block">
+                            <span>
+                                <i class="fa-solid fa-briefcase"></i>
+                            </span>
+                            Works
+                        </a>
+                    </li>
+                    <li class="bg-gray rounded-lg hover:bg-blue hover:text-white p-5">
+                        <a href="blog.html" class="block">
+                            <span>
+                                <i class="fa-solid fa-newspaper"></i>
+                            </span>
+                            Blogs
+                        </a>
+                    </li>
+                    <li  class="bg-gray rounded-lg hover:bg-blue hover:text-white p-5">
+                        <a href="contact.html" class="block">
+                            <span>
+                                <i class="fa-solid fa-address-book"></i>
+                            </span>
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </div>            
+        </section>
+    </main>
+</body>
+<style>
+ 
+
+</style>
+<style>
+    .swiper {
+      display: grid;
+    }
+    .swiper-wrapper {
+      min-width: 0;
+    }
+  </style>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      centeredSlides: false,
+      spaceBetween: 30,
+      pagination:false,
+      freeMode: false,
+    });
+  </script>
+  <script>
+    // Toggle mobile menu visibility
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      var mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</html>
