@@ -337,10 +337,7 @@
     $('#myForm').submit(function(e){
         e.preventDefault()
         $('.message').html('');
-        if(!validate()){
-            alert("dddd");
-        }else{
-            
+        if(validate()){
             let name=document.querySelector("#name").value.trim();
             let email=document.querySelector("#email").value.trim();
             let phone=document.querySelector("#phone").value.trim();
@@ -353,12 +350,16 @@
                         <p><b>Phone:</b>  ${phone}</p>
                         <p><b>Message:</b> ${message} </p>
                     `
-            
+            //return false;
             $.ajax({
+                // headers: {
+                //     'Authorization': 'Basic ' + btoa('anystring:' + 'b15564cab8be1b133f71e5c249a27216-us17'),
+                //     'Content-Type': 'application/json'
+                // },
                 type: "POST",
-                url: "https://mandrillapp.com/api/1.0/messages/send.jsonn",
+                url: "https://us17.api.mailchimp.com/3.0/messages/send",
                 data: JSON.stringify({
-                        "key": "b15564cab8be1b133f71e5c249a27216-us17",
+                     //   "key": "b15564cab8be1b133f71e5c249a27216-us17",
                         "message": {
                             "from_email": "yashveersoftwere06@gmail.com",
                             "to": [
@@ -372,8 +373,7 @@
                             "subject": "Query From Portfolio",
                             "html": html
                         }
-                    }),
-                contentType: "application/json",
+                    }),                
                 success: function(response) {
                     console.log("Email sent successfully:", response);
                 }
