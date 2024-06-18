@@ -1,5 +1,6 @@
 {
     "rewrites": [
+                { "source": "/sitemap.xml","destination": "/dist/sitemap.xml"},
                 { "source": "/resume.html","destination": "/dist/resume.html"},
                 { "source": "/portfolio.html","destination": "/dist/portfolio.html"},
                 { "source": "/contact.html","destination": "/dist/contact.html"},
