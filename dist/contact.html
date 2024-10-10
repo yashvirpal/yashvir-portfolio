@@ -389,7 +389,8 @@
                     $('.message').addClass('text-red-600');
                 },
                 complete: function (response) {
-                    alert("Success");
+                    $('#myForm')[0].reset();
+                    //alert("Success");
                     confetti();
                     $('.message').html("Thank you for contacting us. We will get back to you soon.");
                     $('.message').addClass('text-pdtlemailcolor');
