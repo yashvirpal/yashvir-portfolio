@@ -16,7 +16,7 @@ router.get('/about-us', (req, res) => {
   });
 });
 
-router.get('/contact-us', (req, res) => {
+router.get('/contact', (req, res) => {
   res.render('pages/contact', {
     title: 'Contact Yashvir - Get In Touch for Web Development Projects',
     description: 'Ready to start your next web project? Contact Yashvir for professional web development services, custom solutions, and technical consultations.',
