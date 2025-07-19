@@ -28,6 +28,10 @@ module.exports = {
 
         '1xl': '22px',
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+        robotoSlab: ['Roboto Slab', 'serif'],
+      },
       boxShadow: {
         "pdtl": "0px 4px 6px rgba(0, 0, 0, 0.08)",
         '3xl': '0px 6px 6px 0px rgba(238, 238, 238, 0.2)',
