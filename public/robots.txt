@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /my-website/
+Disallow: /Old/
+
+Sitemap: https://yashvirpal.com/sitemap.xml
