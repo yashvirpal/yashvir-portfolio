@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title || 'YAshvir Portfolio' %></title>
-  <meta name="description" content="<%= description || 'Professional full-stack web development with PHP, Wordpress, Woocomerce, Shopify, Laravel, React, Vue, Node.js, Tailwind CSS, and EJS.' %>">
+  <title>
+    <%= title || 'YAshvir Portfolio' %>
+  </title>
+  <meta name="description"
+    content="<%= description || 'Professional full-stack web development with PHP, Wordpress, Woocomerce, Shopify, Laravel, React, Vue, Node.js, Tailwind CSS, and EJS.' %>">
 
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
 
@@ -29,6 +32,15 @@
   <meta name="twitter:image" content="/assets/img/page-bg-dark-1.jpg" />
   <meta name="twitter:site" content="@devyashvirpal" />
   <meta name="twitter:creator" content="@devyashvirpal" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GN0BNK71BK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GN0BNK71BK');
+  </script>
 
 </head>
 

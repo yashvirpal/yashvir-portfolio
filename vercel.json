@@ -4,8 +4,8 @@
                 { "source": "/resume.html","destination": "/dist/resume.html"},
                 { "source": "/portfolio.html","destination": "/dist/portfolio.html"},
                 { "source": "/contact.html","destination": "/dist/contact.html"},
-                { "source": "/index.html","destination": "/dist/index.html"},
-                { "source": "/(.*)", "destination": "dist/index.html" }
+                { "source": "/about","destination": "pages/home"},
+                { "source": "/(.*)", "destination": "pages/home" }
                 
 
                 ]
