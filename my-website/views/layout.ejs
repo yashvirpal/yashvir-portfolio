@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>
-    <%= title %>
-  </title>
-  <meta name="description" content="<%= description %>" />
+  <title><%= title || 'YAshvir Portfolio' %></title>
+  <meta name="description" content="<%= description || 'Professional full-stack web development with PHP, Wordpress, Woocomerce, Shopify, Laravel, React, Vue, Node.js, Tailwind CSS, and EJS.' %>">
+
   <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
 
   <script
@@ -16,7 +15,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+
+  <link rel="canonical" href="<%= baseUrl + req.originalUrl %>" />
+  <meta property="og:title" content="<%= title %>" />
+  <meta property="og:description" content="<%= description %>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="<%= baseUrl + req.originalUrl %>" />
+  <meta property="og:image" content="/assets/img/page-bg-dark-1.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<%= title %>" />
+  <meta name="twitter:description" content="<%= description %>" />
+  <meta name="twitter:image" content="/assets/img/page-bg-dark-1.jpg" />
+  <meta name="twitter:site" content="@devyashvirpal" />
+  <meta name="twitter:creator" content="@devyashvirpal" />
+
 </head>
 
 <body class="font-popins ">
@@ -29,7 +42,7 @@
           <div class=" bg-black rounded-2xl">
             <div class=" bg-black rounded-2xl flex flex-col gap-4">
               <%- body %>
-              <%- include('partials/footer') %>
+                <%- include('partials/footer') %>
             </div>
           </div>
           <%- include('partials/right-sidebar') %>
@@ -37,4 +50,5 @@
   </main>
   <script src="/assets/js/custom.js"></script>
 </body>
+
 </html>

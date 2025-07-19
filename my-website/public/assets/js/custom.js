@@ -4,14 +4,23 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
 });
 
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    centeredSlides: false,
-    spaceBetween: 30,
-    pagination: false,
-    freeMode: false,
-});
+document.addEventListener('DOMContentLoaded', () => {
+    const swiperEl = document.querySelector('.mySwiper');
 
+    if (swiperEl) {
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 3,
+            centeredSlides: false,
+            spaceBetween: 30,
+            pagination: false,
+            freeMode: false,
+        });
+
+        console.log('Swiper initialized');
+    } else {
+        console.warn('.mySwiper not found, skipping Swiper init');
+    }
+});
 function switchMainTab(el) {
     const filter = el.dataset.filter;
     // Remove active styling from all main tabs
@@ -54,5 +63,11 @@ function switchSubTab(el, subFilter) {
 
 // Auto-click on "All" tab on page load
 window.onload = () => {
-    document.querySelector('[data-filter=""]').click();
+    const filterBtn = document.querySelector('[data-filter=""]');
+
+    if (filterBtn) {
+        filterBtn.click();
+    } else {
+        console.warn('No element found with data-filter=""');
+    }
 };

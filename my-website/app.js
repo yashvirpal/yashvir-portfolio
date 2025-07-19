@@ -13,6 +13,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.use(expressLayouts); // ✅ Enable layouts
 app.set('layout', 'layout'); // ✅ Default layout file
 app.use(express.static(path.join(__dirname, 'public')));
+app.use((req, res, next) => {
+  res.locals.req = req;
+  res.locals.baseUrl = `${req.protocol}://${req.get('host')}`;
+  next();
+});
 
 // Routes
 const mainRoutes = require('./routes/index');
