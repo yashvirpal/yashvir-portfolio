@@ -12,6 +12,11 @@ app.set('layout', 'layout');
 
 // Serve static assets from public
 app.use(express.static(path.join(__dirname, '../public')));
+app.use((req, res, next) => {
+  res.locals.req = req;
+  res.locals.baseUrl = `${req.protocol}://${req.get('host')}`;
+  next();
+});
 
 // Use your routes
 const mainRoutes = require('../routes/index');
