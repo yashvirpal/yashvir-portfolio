@@ -8,9 +8,27 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/about', (req, res) => {
-  res.render('pages/about', {
+router.get('/about-us', (req, res) => {
+  res.render('pages/home', {
     title: 'About Us - My Website',
+    description: 'Learn more about our mission and services'
+  });
+});
+router.get('/contact-us', (req, res) => {
+  res.render('pages/contact', {
+    title: 'Contact Us - My Website',
+    description: 'Learn more about our mission and services'
+  });
+});
+router.get('/resume', (req, res) => {
+  res.render('pages/resume', {
+    title: 'Contact Us - My Website',
+    description: 'Learn more about our mission and services'
+  });
+});
+router.get('/portfolio', (req, res) => {
+  res.render('pages/portfolio', {
+    title: 'Contact Us - My Website',
     description: 'Learn more about our mission and services'
   });
 });

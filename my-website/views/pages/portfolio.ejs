@@ -1,0 +1,349 @@
+<div class="px-5 py-5 md:px-10 md:pt-10 ">
+    <div class="text-silver text-justify">
+        <div class="flex gap-3 items-center">
+            <h2 class="text-white font-bold text-3xl font-roboto-slab">Portfolio</h2>
+            <span class="bg-blue w-[80px] h-[2px]"></span>
+        </div>
+    </div>
+    <div>
+        <!-- MAIN TABS -->
+        <ul class="text-silver flex flex-wrap justify-center [&>*]:p-2 [&>*]:m-2 text-white">
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchMainTab(this)" data-filter="">All
+            </li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchMainTab(this)" data-filter="php">PHP
+            </li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchMainTab(this)"
+                data-filter="javascript">JavaScript</li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchMainTab(this)" data-filter="htmlcss">
+                HTML & CSS</li>
+        </ul>
+
+        <!-- SUB TABS: JAVASCRIPT -->
+        <ul id="js-sub-tabs"
+            class="hidden flex flex-wrap justify-center [&>*]:px-3 [&>*]:py-1 [&>*]:m-2 text-sm text-white">
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'vue')">
+                Vue</li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'react')">React</li>
+            <!-- <li class="hover:text-blue-400 tablinks cursor-pointer"
+                                    onclick="switchSubTab(this, 'node')">Node</li> -->
+        </ul>
+
+        <!-- SUB TABS: PHP -->
+        <ul id="php-sub-tabs"
+            class="hidden flex flex-wrap justify-center [&>*]:px-3 [&>*]:py-1 [&>*]:m-2 text-sm text-white">
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'laravel')">Laravel</li>
+            <!-- <li class="hover:text-blue-400 tablinks cursor-pointer"
+                                    onclick="switchSubTab(this, 'codeigniter')">CodeIgniter</li> -->
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'wordpress')">WordPress
+            </li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'shopify')">Shopify</li>
+            <li class="hover:text-blue-400 tablinks cursor-pointer" onclick="switchSubTab(this, 'corephp')">Core PHP
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="px-5 py-5 md:px-10 text-silver mx-auto flex flex-col flex-wrap justify-around
+                     md:flex-row md:flex-start items-center md:gap:7  lg:justify-around  lg:gap:3
+                    [&>*]:bg-gray [&>*]:p-2 [&>*]:rounded-lg [&>*]:mb-4 [&>*]:w-full md:[&>*]:w-5/12  lg:[&>*]:w-5/12
+                     ">
+
+
+    <!-- Projects Content -->
+
+
+
+    <!-- PHP Projects -->
+    <div class="tab-panel tabcontent php corephp">
+        <div class="flex flex-col items-center bg-gray-800 p-4 rounded-lg">
+            <img class="rounded-md" src="/assets/img/projects/al-pasban.png" />
+            <p><span>E-Commerce</span> · <span>Core PHP</span></p>
+            <h6 class="text-white font-semibold">AL-Pasban</h6>
+            <a target="_blank" href="https://www.alpasban.com/"
+                class="mt-4 px-4 py-2 rounded bg-blue-600 hover:bg-blue-800">Demo</a>
+        </div>
+    </div>
+
+    <!-- <div class="tab-panel tabcontent php codeigniter">
+                            Comming Soon
+                        </div> -->
+
+    <div class="tab-panel tabcontent php wordpress">
+        Comming Soon
+    </div>
+
+    <div class="tab-panel tabcontent php shopify">
+        Comming Soon
+    </div>
+
+
+    <!-- Start Laravel -->
+    <div class="tab-panel tabcontent php laravel">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/pngguru.png" />
+            <p><span>Image Listing</span> . <span>Laravel</span></p>
+            <h6 class="text-white">PNGGURU </h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://www.pngguru.in/" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent php laravel">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/manavta-family.png" />
+            <p><span>Membership and Payment</span> . <span>Laravel</span></p>
+            <h6 class="text-white">Manavta Family </h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://manavtafamily.org/" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Laravel -->
+
+    <!-- JavaScript Projects -->
+    <!-- Start Javascript -->
+    <div class="tab-panel tabcontent javascript javascript">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/js.png" />
+            <p><span>Chrome Like Game</span> . <span>JavaScript</span></p>
+            <h6 class="text-white">Game</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/javascript-projects/chrome-game/"
+                    target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent javascript javascript">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/js.png" />
+            <p><span>Hit Mosquito</span> . <span>JavaScript</span></p>
+            <h6 class="text-white">Game</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/javascript-projects/hit-mosquito/"
+                    target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent javascript javascript">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/js.png" />
+            <p><span>Love Calculator</span> . <span>JavaScript</span></p>
+            <h6 class="text-white">Game</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/javascript-projects/love-calculator/"
+                    target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent javascript javascript">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/js.png" />
+            <p><span>Password Generator</span> . <span>JavaScript</span></p>
+            <h6 class="text-white">Game</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/javascript-projects/password-generator/"
+                    target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent javascript javascript">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/js.png" />
+            <p><span>API Call</span> . <span>JavaScript</span></p>
+            <h6 class="text-white">Game</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/javascript-projects/api-call/"
+                    target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <!-- End JavaScript -->
+    <!-- Start Vue -->
+    <div class="tab-panel tabcontent javascript vue">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/restaurant.png" />
+            <p><span>Restaurant</span> . <span>Vue</span></p>
+            <h6 class="text-white">Restaurant</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://github.com/yashvirpal/restaurant-vue" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Source Code</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Vue -->
+    <!-- Start react -->
+    <div class="tab-panel tabcontent javascript react">
+        Comming Soon
+    </div>
+    <!-- End react -->
+    <!-- Start node -->
+    <!-- <div class="tab-panel tabcontent javascript node">
+                            Cooming Soon
+                        </div> -->
+    <!-- End node -->
+
+
+    <!-- Start HTML & CSS -->
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/creativity.png" />
+            <p><span>Creativity</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Creativity</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-14/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/hosting.png" />
+            <p><span>Hosting</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Hosting</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-11/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/services.png" />
+            <p><span>Service</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Service</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-12/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/saas.png" />
+            <p><span>Hosting</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Hosting</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/projects/project-13/" target="_blank"
+                    class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/service15.png" />
+            <p><span>Service</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Service</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/projects/project-15/" target="_blank"
+                    class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/interior.png" />
+            <p><span>Interior </span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Interior </h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-10/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/model.png" />
+            <p><span>Modeling</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Modeling</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-1/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <div class="tab-panel tabcontent htmlcss">
+        <div class="flex justify-center items-centerr flex-col [&>*]:p-1 ">
+            <img class="rounded-md" src="/assets/img/projects/shop.png">
+            <p><span>Shop</span> . <span>HTML & CSS</span></p>
+            <h6 class="text-white">Shop</h6>
+            <div class="flex justify-center text-white gap-10 text-l my-4  
+                                ">
+
+                <a target="_blank" href="https://yashvirpalprojects.netlify.app/project-7/" target="_blank" class="rounded-lg px-4 py-2 bg-blue 
+                                    hover:bg-gray hover:border hover:border-blue
+                                    ">
+                    Demo</a>
+            </div>
+        </div>
+    </div>
+    <!-- END HTML & CSS -->
+</div>
