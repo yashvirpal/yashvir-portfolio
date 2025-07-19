@@ -201,7 +201,27 @@
                             </div>
                         </div>
                         <div>
-                            <ul class="mb-30 text-silver text-right flex [&>*]:p-2  [&>*]:m-2 justify-end">
+                            <ul class="mb-30 text-silver text-right flex [&>*]:p-2 [&>*]:m-2 justify-end">
+
+    <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="all">All</li>
+    <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="php">PHP</li>
+
+    <!-- JavaScript with dropdown submenu -->
+    <li class="relative group">
+        <span class="hover:text-blue cursor-pointer">JavaScript</span>
+
+        <ul class="absolute hidden group-hover:flex flex-col bg-white border rounded shadow-md text-left z-10 mt-2 right-0 min-w-[120px]">
+            <li class="px-4 py-2 hover:bg-gray-100 tablinks cursor-pointer" onclick="Projects(this)" data-filter="react">React</li>
+            <li class="px-4 py-2 hover:bg-gray-100 tablinks cursor-pointer" onclick="Projects(this)" data-filter="vue">Vue</li>
+        </ul>
+    </li>
+
+    <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="laravel">Laravel</li>
+    <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="htmlcss">Html & Css</li>
+
+</ul>
+
+                            <!-- <ul class="mb-30 text-silver text-right flex [&>*]:p-2  [&>*]:m-2 justify-end">
                                 <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="all">All</li>
                                 <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="php">PHP</li>
                                 <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="javascript">
@@ -211,7 +231,7 @@
                                 <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="vue"> Vue
                                 </li>
                                 <li class="hover:text-blue tablinks" onclick="Projects(this)" data-filter="htmlcss">
-                                    Html & Css</li>
+                                    Html & Css</li> -->
                             </ul>
                         </div>
                     </div>
