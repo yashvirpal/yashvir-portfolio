@@ -20,7 +20,8 @@ router.get('/contact', (req, res) => {
   res.render('pages/contact', {
     title: 'Contact Yashvir - Get In Touch for Web Development Projects',
     description: 'Ready to start your next web project? Contact Yashvir for professional web development services, custom solutions, and technical consultations.',
-    keywords: 'contact web developer, hire PHP developer, Laravel development services, React developer contact, web development consultation, project inquiry'
+    keywords: 'contact web developer, hire PHP developer, Laravel development services, React developer contact, web development consultation, project inquiry',
+
   });
 });
 
@@ -40,7 +41,7 @@ router.get('/portfolio', (req, res) => {
   });
 });
 
-router.get('/send-mail', (req, res) => {
+router.post('/send-mail', (req, res) => {
   res.render('pages/send-mail', {
     title: 'Yashvir\'s Portfolio - Send Mail',
     description: 'Explore Yashvir\'s portfolio of web development projects including PHP applications, Laravel systems, React apps, WordPress sites, and e-commerce solutions.',

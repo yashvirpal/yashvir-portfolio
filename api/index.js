@@ -48,4 +48,13 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+const recaptcha = {
+  siteKey: process.env.RECAPTCHA_SITE_KEY,
+  secretKey: process.env.RECAPTCHA_SECRET_KEY
+};
+app.locals.recaptchaSiteKey = recaptcha.siteKey;
+
+    
+
+
 module.exports = app;
