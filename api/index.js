@@ -54,7 +54,5 @@ const recaptcha = {
 };
 app.locals.recaptchaSiteKey = recaptcha.siteKey;
 
-    
-
-
+console.log('Loaded RECAPTCHA_SITE_KEY::', recaptcha.siteKey);  // check what prints
 module.exports = app;

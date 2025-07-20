@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts'); // ✅ Add this
+require('dotenv').config();  // Load env once here
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -22,6 +23,12 @@ app.use((req, res, next) => {
 // Routes
 const mainRoutes = require('./routes/index');
 app.use('/', mainRoutes);
+
+
+
+const recaptcha = require('./api/index');
+app.locals.recaptchaSiteKey = recaptcha.siteKey;
+console.log('Loaded RECAPTCHA_SITE_KEY::', recaptcha.siteKey);  // check what prints
 
 // Start server
 app.listen(port, () => {

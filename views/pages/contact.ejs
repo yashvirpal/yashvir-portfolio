@@ -8,7 +8,7 @@
 </div>
 <div class="px-5 py-5 md:px-10 bg-gray text-silver  mx-5 rounded-2xl">
     <p>I'm always open to discussing product</p>
-    <h6 class="text-white my-4 font-bold">design & development work or partnerships.</h6>
+    <h6 class="text-white my-4 font-bold">Design & Development work or partnerships.</h6>
     <form id="myForm" action="/send-mail" method="POST">
         <div class="focus:[&>*]:border-blue focus:[&>label]:text-blue my-6">
             <label class="block ">Name * </label>
@@ -32,44 +32,73 @@
         <button class="rounded-lg text-white block border border-silver px-3 py-1 hover:border-blue">Submit</button>
         <br />
         <span id="error_message" class="message mt-10 text-pdtlphonecolor"></span>
-
-
-
     </form>
+    <div id="ajax-loader" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <style>
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 5px solid #ccc;
+            border-top-color: #333;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 
 </div>
 
 <script src="https://www.google.com/recaptcha/api.js?render=<%= recaptchaSiteKey %>"></script>
 
 <script>
-    const SITE_KEY = '<%= recaptchaSiteKey %>';
+    const form = document.getElementById('myForm');
+    const loader = document.getElementById('ajax-loader');
+    const errorMessage = document.getElementById('error_message');
 
-    document.getElementById('myForm').addEventListener('submit', async function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
-        const form = e.target;
-        document.getElementById('error_message').innerText = "";
+        errorMessage.innerText = "";
 
-        // Get reCAPTCHA token first
-        grecaptcha.ready(async function () {
-            const token = await grecaptcha.execute(SITE_KEY, { action: 'submit' });
+        // Show loader
+        loader.style.display = 'block';
 
-            // Append token to form data
-            const formData = new FormData(form);
-            formData.append('recaptchaToken', token);
+        try {
+            const SITE_KEY = '<%= recaptchaSiteKey %>';
 
-            // Send form data using fetch
-            const res = await fetch(form.action, {
-                method: 'POST',
-                body: new URLSearchParams(formData)
+            grecaptcha.ready(async function () {
+                const token = await grecaptcha.execute(SITE_KEY, { action: 'submit' });
+
+                const formData = new FormData(form);
+                formData.append('recaptchaToken', token);
+
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new URLSearchParams(formData)
+                });
+
+                const text = await response.text();
+
+                if (!response.ok) {
+                    errorMessage.innerText = text;
+                } else {
+                    window.location.href = '/thankyou';
+                }
             });
-
-            const text = await res.text();
-
-            if (!res.ok) {
-                document.getElementById('error_message').innerText = text;
-            } else {
-                window.location.href = '/thankyou';
-            }
-        });
+        } catch (err) {
+            errorMessage.innerText = 'Something went wrong. Please try again.';
+            console.error(err);
+        } finally {
+            // Hide loader
+            loader.style.display = 'none';
+        }
     });
 </script>
