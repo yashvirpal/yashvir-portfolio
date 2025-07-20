@@ -40,4 +40,19 @@ router.get('/portfolio', (req, res) => {
   });
 });
 
+router.get('/send-mail', (req, res) => {
+  res.render('pages/send-mail', {
+    title: 'Yashvir\'s Portfolio - Send Mail',
+    description: 'Explore Yashvir\'s portfolio of web development projects including PHP applications, Laravel systems, React apps, WordPress sites, and e-commerce solutions.',
+    keywords: 'web development portfolio, PHP projects, Laravel applications, React projects, WordPress websites, WooCommerce stores, Shopify development, project showcase'
+  });
+});
+router.get('/thankyou', (req, res) => {
+  res.render('pages/thank-you', {
+    title: 'Yashvir\'s Portfolio - Send Mail',
+    description: 'Explore Yashvir\'s portfolio of web development projects including PHP applications, Laravel systems, React apps, WordPress sites, and e-commerce solutions.',
+    keywords: 'web development portfolio, PHP projects, Laravel applications, React projects, WordPress websites, WooCommerce stores, Shopify development, project showcase'
+  });
+});
+
 module.exports = router;

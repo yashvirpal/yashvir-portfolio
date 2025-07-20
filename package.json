@@ -1,14 +1,11 @@
 {
-  "name": "my-website",
+  "name": "Yashvir Portfolio",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
     "build:css": "npx tailwindcss -i ./public/assets/css/tailwind.css -o ./public/assets/css/style.css --watch",
     "start": "node api/index.js",
     "dev": "node api/index.js"
-  },
-  "engines": {
-    "node": "18.x"
   },
   "dependencies": {
     "@fontsource/poppins": "^5.2.6",

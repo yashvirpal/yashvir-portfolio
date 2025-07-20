@@ -1,12 +1,11 @@
-// routes/send-contact.js
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
+// ✅ Define transporter
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST,
-  port: process.env.EMAIL_PORT,
-  secure: true,
+  service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
@@ -14,17 +13,21 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post('/', async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, phone, message } = req.body;
 
-  // Basic validation
-  if (!name || !email || !message) {
+  if (!name || !email || !phone || !message) {
     return res.status(400).send('All fields are required.');
   }
 
-  // Simple email format check (regex)
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9+\-()\s]{7,}$/;
+
   if (!emailRegex.test(email)) {
-    return res.status(400).send('Please enter a valid email address.');
+    return res.status(400).send('Invalid email address.');
+  }
+
+  if (!phoneRegex.test(phone)) {
+    return res.status(400).send('Invalid phone number.');
   }
 
   try {
@@ -32,13 +35,14 @@ router.post('/', async (req, res) => {
       from: `"${name}" <${email}>`,
       to: process.env.EMAIL_USER,
       subject: `New Contact Message from ${name}`,
-      text: message,
-      html: `<p>${message}</p><p>From: ${name} (${email})</p>`
+      text: `Phone: ${phone}\n\n${message}`,
+      html: `<p>${message}</p><p><strong>Phone:</strong> ${phone}</p><p>From: ${name} (${email})</p>`
     });
-    res.send('Thank you for contacting us!');
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Failed to send message.');
+
+   // res.redirect('/thankyou');
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Something went wrong. Please try again.');
   }
 });
 
