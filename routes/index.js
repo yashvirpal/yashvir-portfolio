@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   });
 });
 
-router.get('/about-us', (req, res) => {
+router.get('/about', (req, res) => {
   res.render('pages/about', {
     title: 'About Yashvir - Professional Web Developer & Tech Expert',
     description: 'Learn about Yashvir\'s expertise in full-stack web development, experience with modern frameworks, and passion for creating innovative digital solutions.',
@@ -16,7 +16,7 @@ router.get('/about-us', (req, res) => {
   });
 });
 
-router.get('/contact-us', (req, res) => {
+router.get('/contact', (req, res) => {
   res.render('pages/contact', {
     title: 'Contact Yashvir - Get In Touch for Web Development Projects',
     description: 'Ready to start your next web project? Contact Yashvir for professional web development services, custom solutions, and technical consultations.',
