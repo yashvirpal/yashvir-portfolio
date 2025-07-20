@@ -50,12 +50,12 @@ router.post('/', async (req, res) => {
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
       to: process.env.EMAIL_USER,
-      subject: `New Contact Message from ${name}`,
+      subject: `New Query from ${name}`,
       text: `Phone: ${phone}\n\n${message}`,
       html: `<p>${message}</p><p><strong>Phone:</strong> ${phone}</p><p>From: ${name} (${email})</p>`
     });
 
-    // res.redirect('/thankyou');
+     res.redirect('/thankyou');
   } catch (err) {
     console.error(err);
     res.status(500).send('Something went wrong. Please try again.');
