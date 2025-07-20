@@ -593,10 +593,6 @@ video {
   margin-top: 2.5rem;
 }
 
-.mt-20 {
-  margin-top: 5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -652,6 +648,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.max-h-\[200px\] {
+  max-height: 200px;
 }
 
 .w-10\/12 {
@@ -877,6 +877,16 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
