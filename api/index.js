@@ -22,4 +22,8 @@ app.use((req, res, next) => {
 const mainRoutes = require('../routes/index');
 app.use('/', mainRoutes);
 
+app.use((req, res) => {
+  res.redirect('/');
+});
+
 module.exports = app;
