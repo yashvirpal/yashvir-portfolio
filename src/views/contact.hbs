@@ -1,0 +1,34 @@
+<section class="section contact-section">
+  <div class="contact-num mono small cyan">// what's next?</div>
+  <h2 class="contact-heading">Get In Touch</h2>
+  <p class="contact-text">
+    I'm currently open to new opportunities. Whether you have a question,
+    project idea, or just want to say hello — my inbox is always open.
+  </p>
+  <a class="btn" href="mailto:{{person.email}}">
+    Say Hello
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+      <polyline points="22,6 12,13 2,6"/>
+    </svg>
+  </a>
+
+  <div class="contact-details">
+    <div class="contact-detail-item">
+      <span class="info-label">Email</span>
+      <a href="mailto:{{person.email}}" class="info-link">{{person.email}}</a>
+    </div>
+    <div class="contact-detail-item">
+      <span class="info-label">Phone</span>
+      <a href="tel:{{person.phone}}" class="info-link">{{person.phone}}</a>
+    </div>
+    <div class="contact-detail-item">
+      <span class="info-label">Location</span>
+      <span class="info-value">{{person.location}}</span>
+    </div>
+    <div class="contact-detail-item">
+      <span class="info-label">WhatsApp</span>
+      <a href="https://wa.me/918756672297" class="info-link" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </div>
+</section>

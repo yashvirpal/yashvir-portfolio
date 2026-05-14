@@ -1,0 +1,100 @@
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-label">About</div>
+
+  {{#each about}}
+  <p class="about-text">{{{this}}}</p>
+  {{/each}}
+
+  <div class="info-row">
+    <div class="info-item">
+      <span class="info-label">Location</span>
+      <span class="info-value">{{person.location}}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Email</span>
+      <a href="mailto:{{person.email}}" class="info-link">{{person.email}}</a>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Phone</span>
+      <span class="info-value">{{person.phone}}</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="section-label">Experience</div>
+
+  {{#each experience}}
+  <div class="exp-item">
+    <div class="exp-date">{{period}}</div>
+    <div class="exp-content">
+      <h3>{{role}}</h3>
+      <div class="company">
+        <a href="{{companyUrl}}" target="_blank" rel="noopener">{{company}}</a>
+      </div>
+      <p>{{description}}</p>
+      <div class="tags">
+        {{#each tags}}<span class="tag">{{this}}</span>{{/each}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+  <div style="margin-top:24px;">
+    <a href="{{person.cvUrl}}" class="btn" target="_blank" rel="noopener">
+      Download Full Résumé
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-label">Skills</div>
+  <div class="skills-grid">
+    {{#each skills}}
+    <div class="skill-card">
+      <h4>{{category}}</h4>
+      <ul class="skill-list">
+        {{#each items}}<li>{{this}}</li>{{/each}}
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section id="projects" class="section">
+  <div class="section-label">Featured Projects</div>
+
+  {{#each projects}}
+  <a class="project-card" href="{{url}}" target="_blank" rel="noopener">
+    <span class="proj-num">{{padStart num}}</span>
+    <div>
+      <h3>{{title}}</h3>
+      <div class="proj-type">{{type}}</div>
+      <p>{{description}}</p>
+      <div class="tags" style="margin-top:10px;">
+        {{#each tags}}<span class="tag">{{this}}</span>{{/each}}
+      </div>
+    </div>
+    <span class="proj-arrow" aria-hidden="true">↗</span>
+  </a>
+  {{/each}}
+
+  <div style="margin-top:24px;text-align:right;">
+    <a href="/projects" class="link-arrow">
+      View all projects
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </a>
+  </div>
+</section>

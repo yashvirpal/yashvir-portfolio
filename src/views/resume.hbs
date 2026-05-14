@@ -1,0 +1,73 @@
+<!-- EXPERIENCE -->
+<section class="section">
+  <div class="section-label">Experience</div>
+
+  {{#each experience}}
+  <div class="exp-item">
+    <div class="exp-date">{{period}}</div>
+    <div class="exp-content">
+      <h3>{{role}}</h3>
+      <div class="company">
+        <a href="{{companyUrl}}" target="_blank" rel="noopener">{{company}}</a>
+      </div>
+      <p>{{description}}</p>
+      <div class="tags">
+        {{#each tags}}<span class="tag">{{this}}</span>{{/each}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</section>
+
+<!-- EDUCATION -->
+<section class="section">
+  <div class="section-label">Education</div>
+
+  <div class="exp-item">
+    <div class="exp-date">2011 — 2017</div>
+    <div class="exp-content">
+      <h3>BCA-MCA Integrated</h3>
+      <div class="company">IGNOU · HBTI Kanpur</div>
+    </div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-date">2011</div>
+    <div class="exp-content">
+      <h3>12th — UP Board</h3>
+      <div class="company">Akabarpur Inter Collage, Kanpur Dehat</div>
+    </div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-date">2008</div>
+    <div class="exp-content">
+      <h3>10th — UP Board</h3>
+      <div class="company">DGA Inter Collage, Kanpur Dehat</div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section">
+  <div class="section-label">Skills</div>
+  <div class="skills-grid">
+    {{#each skills}}
+    <div class="skill-card">
+      <h4>{{category}}</h4>
+      <ul class="skill-list">
+        {{#each items}}<li>{{this}}</li>{{/each}}
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+</section>
+
+<div style="text-align:center;padding:24px 0 48px;">
+  <a href="{{person.cvUrl}}" class="btn" target="_blank" rel="noopener">
+    Download Full Résumé
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+  </a>
+</div>
