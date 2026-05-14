@@ -11,7 +11,8 @@ const PORT = process.env.PORT || 3000;
 
 // Allow Vercel wrapper (api/index.js) to override paths via env vars
 const VIEWS_PATH  = process.env.VIEWS_PATH  || path.join(__dirname, 'views');
-const PUBLIC_PATH = process.env.PUBLIC_PATH || path.join(__dirname, 'public');
+// Root-level public/ is the single source of truth for static files
+const PUBLIC_PATH = process.env.PUBLIC_PATH || path.join(__dirname, '..', 'public');
 
 // ── Security & compression ─────────────────────────────────────────
 app.use(helmet({
