@@ -19,6 +19,7 @@ module.exports = {
     phone: '+91 875 667 2297',
     location: 'Delhi, India',
     birthday: 'Nov 26, 1993',
+    image: '/Yashvirpal.png',
     cvUrl: '/assets/yashvirpal_developer.pdf',
   },
 
