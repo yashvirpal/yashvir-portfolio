@@ -18,11 +18,12 @@ const PUBLIC_PATH = process.env.PUBLIC_PATH || path.join(__dirname, '..', 'publi
 app.use(helmet({
   contentSecurityPolicy: {
     directives: {
-      defaultSrc: ["'self'"],
-      styleSrc:   ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-      fontSrc:    ["'self'", 'https://fonts.gstatic.com'],
-      scriptSrc:  ["'self'", "'unsafe-inline'"],
-      imgSrc:     ["'self'", 'data:', 'https:'],
+      defaultSrc:  ["'self'"],
+      styleSrc:    ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+      fontSrc:     ["'self'", 'https://fonts.gstatic.com'],
+      scriptSrc:   ["'self'", "'unsafe-inline'", 'https://www.googletagmanager.com'],
+      connectSrc:  ["'self'", 'https://www.google-analytics.com', 'https://analytics.google.com', 'https://www.googletagmanager.com'],
+      imgSrc:      ["'self'", 'data:', 'https:'],
     },
   },
 }));
