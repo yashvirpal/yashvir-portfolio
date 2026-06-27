@@ -5,7 +5,7 @@ module.exports = {
   meta: {
     title: 'Yashvir Pal — Fullstack Web Developer',
     description:
-      'Professional full-stack web developer with 7+ years of experience in PHP, Laravel, React, Vue.js, Node.js, WordPress, and Tailwind CSS.',
+      'Professional full-stack web developer with 9+ years of experience in PHP, Laravel, React, Vue.js, Node.js, WordPress, and Tailwind CSS.',
     url: 'https://yashvirpal.com',
     image: '/assets/og-image.png',
     twitterHandle: '@devyashvirpal',
@@ -31,12 +31,21 @@ module.exports = {
   ],
 
   about: [
-    "I'm a highly skilled and motivated Software Development Engineer with over <strong>7+ years of experience</strong> in software creation and maintenance. I possess a strong foundation in website development and am adept at tackling project tasks across various levels.",
+    "I'm a highly skilled and motivated Software Development Engineer with over <strong>9+ years of experience</strong> in software creation and maintenance. I possess a strong foundation in website development and am adept at tackling project tasks across various levels.",
     "I specialize in designing and building <strong>responsive, user-friendly websites</strong> that deliver exceptional user experiences. I do my best work at the intersection of clean code and thoughtful UX — building visually appealing, highly functional products optimized for performance.",
     "Known for being communicative, honest, and adaptable, I have a proven track record in <strong>mentoring co-workers</strong> and assuming leadership roles in project implementation.",
   ],
 
   experience: [
+    {
+      period: 'Jun 2024 — Present',
+      role: 'Freelance Web Developer',
+      company: 'Self-employed',
+      companyUrl: null,
+      description:
+        'Working independently with clients on full-stack web projects — building custom Laravel and React applications, e-commerce stores, and performance-optimized WordPress sites. Handling end-to-end delivery from architecture to deployment.',
+      tags: ['Laravel', 'React', 'WordPress', 'Node.js', 'MySQL'],
+    },
     {
       period: 'Jan 2021 — May 2024',
       role: 'Team Lead (D&D)',
@@ -50,7 +59,7 @@ module.exports = {
       period: 'Nov 2017 — Oct 2021',
       role: 'Associate Web Developer',
       company: 'V2web Hosting Pvt. Ltd.',
-      companyUrl: '#',
+      companyUrl: 'https://v2web.in/',
       description:
         'Developed and maintained web applications for diverse clients. Built custom PHP/Laravel backends, designed responsive frontends, and integrated third-party APIs. Gained deep expertise in e-commerce solutions using WooCommerce and Shopify.',
       tags: ['PHP', 'Laravel', 'CodeIgniter', 'WooCommerce', 'JavaScript', 'CSS'],
@@ -81,7 +90,7 @@ module.exports = {
     },
     {
       category: 'Databases & Tools',
-      items: ['MySQL', 'MongoDB', 'Git / GitHub', 'LAMP Stack', 'Photoshop', 'Figma'],
+      items: ['MySQL', 'MongoDB', 'Git / GitHub', 'LAMP Stack'],
     },
   ],
 

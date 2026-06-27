@@ -17,12 +17,15 @@
     </div>
 
     {{#if github}}
-    <button
+    <a
       class="proj-github"
-      onclick="event.stopPropagation(); window.open('{{github}}', '_blank')"
+      href="{{github}}"
+      target="_blank"
+      rel="noopener"
+      onclick="event.stopPropagation()"
     >
       GitHub
-    </button>
+    </a>
     {{/if}}
   </div>
 
